@@ -3,7 +3,7 @@ class QuizController < ApplicationController
     # Start the quiz by resetting the score and setting the question index
     session[:score] = 0
     session[:question_index] = 0
-    redirect_to question_path(Question.first)
+    render 'quiz/index'
   end
 
   def show_result
