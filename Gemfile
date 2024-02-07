@@ -67,3 +67,7 @@ group :test do
 end
 
 gem 'rubocop', '>= 1.0', '< 2.0'
+
+gem 'bootstrap', '~> 5.3.0'
+
+gem 'sassc-rails', '~> 2.1'

@@ -1,11 +1,17 @@
-<h1><%= @question.content %></h1>
-<%= form_with url: submit_answer_question_path, method: :post do |form| %>
-  <%= hidden_field_tag :question_id, @question.id %>
-  <% @answers.each do |answer| %>
-    <div>
-      <%= radio_button_tag 'answer_id', answer.id %>
-      <%= label_tag 'answer_id', answer.content %>
+<div class="container text-end result-card">
+  <div class="container d-flex justify-content-end align-items-center vh-100">
+    <div class="col-md-8">
+      <h1 class="text-end"><%= @question.content %></h1>
+      <%= form_with url: submit_answer_question_path, method: :post do |form| %>
+        <%= hidden_field_tag :question_id, @question.id %>
+        <% @answers.each do |answer| %>
+          <div class="form-check text-end">
+            <%= radio_button_tag 'answer_id', answer.id, class: "form-check-input" %>
+            <%= label_tag 'answer_id', answer.content, class: "form-check-label text-end" %>
+          </div>
+        <% end %>
+        <%= form.submit "Submit Answer", class: "btn btn-outline-danger mt-3" %>
+      <% end %>
     </div>
-  <% end %>
-  <%= form.submit "Submit Answer", class: "btn btn-primary" %>
-<% end %>
+  </div>
+</div>

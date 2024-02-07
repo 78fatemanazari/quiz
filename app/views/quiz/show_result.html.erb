@@ -1,2 +1,16 @@
-<h1>Your Quiz Result</h1>
-<p>Your score: <%= @score %></p>
+<div class="container">
+  <div class="row justify-content-center align-items-center vh-100">
+    <div class="col-md-8">
+      <div class="card result-card">
+        <div class="card-body text-center">
+        <div class="text-danger">
+    <h1>تا خون در رگ ماست</h1>
+    <h1>ایران میهن ماست</h1>
+  </div>
+          <h1 class="card-title">ممنون از شما!</h1>
+          <p class="card-text fw-bold">امتیاز شما: <%= @score %> / <%= Question.count %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
