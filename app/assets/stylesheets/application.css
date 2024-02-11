@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+  font-family: vazir;
+  src: url(/app/assets/fonts/Vazirmatn-Black.woff2) format('woff2');
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: vazir, Verdana, Geneva, Tahoma, sans-serif;
+  direction: rtl;
+  height: 100%;
+  background-image: url('image4.jpg');
+  background-size: cover; /* Adjust to cover the entire page */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+/* Optional: Center the container horizontally */
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Optional: Center the container vertically */
+.vh-100 {
+  min-height: 100vh;
+}
+
+.result-card {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border-radius: 10px; /* Rounded corners for the card */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Drop shadow effect */
+}
