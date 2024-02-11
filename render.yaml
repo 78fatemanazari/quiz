@@ -1,7 +1,7 @@
 databases:
-  - name: quiz_app
-    databaseName: quiz_app
-    user: quiz_app_user
+  - name: Quiz
+    databaseName: quiz_vhck 
+    user: quiz_vhck_user
     plan: free
 
 services:
