@@ -1,21 +1,21 @@
 databases:
-  - name: Quiz
-    databaseName: quiz_vhck 
-    user: quiz_vhck_user
+  - name: quiz-app
+    databaseName: quiz_app_oe4x 
+    user: quiz_app_oe4x_user
     plan: free
 
 services:
   - type: web
-    name: quiz_app
+    name: quiz
     runtime: ruby
     plan: free
     buildCommand: "./bin/render-build.sh"
     # preDeployCommand: "./bin/rails db:migrate" # preDeployCommand only available on paid instance types
-    startCommand:  "bundle exec rails server"
+    startCommand:  "./bin/rails server"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: quiz_app
+          name: quiz_app_oe4x 
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
